@@ -11,7 +11,7 @@ import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
 import AIBots from './pages/AIBots'
 import CustomerChat from './pages/CustomerChat'
-import Conversations from './pages/Conversations'
+import Conversations from './pages/conversations'
 import ProtectedRoute from './components/ProtectedRoute'
 import Layout from './components/Layout'
 
