@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 
 function Conversations() {
 
@@ -16,7 +17,7 @@ function Conversations() {
         try {
 
             const response = await axios.get(
-                'http://localhost:5000/api/conversations/6a09751be3b0520f2391632e'
+                 `${API_URL}/api/conversations/6a09751be3b0520f2391632e`
             )
 
             setConversations(response.data)

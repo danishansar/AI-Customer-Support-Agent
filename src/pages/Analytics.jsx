@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-
+import { API_URL } from '../config'
 import {
     ResponsiveContainer,
     BarChart,
@@ -36,7 +36,7 @@ function Analytics() {
             const token = localStorage.getItem('token')
 
             const response = await axios.get(
-                'http://localhost:5000/api/dashboard',
+                 `${API_URL}/api/dashboard`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { API_URL } from '../config'
 
 function Settings() {
 
@@ -20,9 +21,8 @@ function Settings() {
         try {
 
             const token = localStorage.getItem('token')
-
             const response = await axios.get(
-                'http://localhost:5000/api/auth/profile',
+                 `${API_URL}/api/auth/profile`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -77,7 +77,7 @@ function Settings() {
             const token = localStorage.getItem('token')
 
             const response = await axios.put(
-                'http://localhost:5000/api/settings',
+                 `${API_URL}/api/settings`,
                 formData,
                 {
                     headers: {

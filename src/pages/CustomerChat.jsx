@@ -10,6 +10,8 @@ import {
     useParams
 } from 'react-router-dom'
 
+import { API_URL } from '../config'
+
 function CustomerChat() {
 
     const { botId } = useParams()
@@ -45,7 +47,7 @@ function CustomerChat() {
         try {
 
             const response = await axios.get(
-                `http://localhost:5000/api/chatbots/${botId}`
+                `${API_URL}/api/chatbots/${botId}`
             )
 
             setBot(response.data)
@@ -90,7 +92,7 @@ function CustomerChat() {
         try {
 
             const response = await axios.post(
-                'http://localhost:5000/api/chat',
+                 `${API_URL}/api/chat`,
                 {
                     message: userText,
                     botId

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 
 function AIBots() {
 
@@ -32,7 +33,7 @@ function AIBots() {
             const token = localStorage.getItem('token')
 
             await axios.post(
-                'http://localhost:5000/api/chatbots',
+                 `${API_URL}/api/chatbots`,
                 formData,
                 {
                     headers: {
@@ -69,7 +70,7 @@ function AIBots() {
             const token = localStorage.getItem('token')
 
             const response = await axios.get(
-                'http://localhost:5000/api/chatbots',
+                 `${API_URL}/api/chatbots`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -95,7 +96,7 @@ function AIBots() {
             const token = localStorage.getItem('token')
 
             await axios.delete(
-                `http://localhost:5000/api/chatbots/${id}`,
+                `${API_URL}/api/chatbots/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
