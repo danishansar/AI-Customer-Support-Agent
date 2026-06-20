@@ -57,7 +57,7 @@ function Dashboard() {
   const fetchProfile = async () => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.get( `${API_URL}/api/auth/profile`, {
+      const res = await axios.get( `${API_URL}api/auth/profile`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setUser(res.data.user)
@@ -69,7 +69,7 @@ function Dashboard() {
   const fetchDashboardStats = async () => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.get( `${API_URL}/api/dashboard`, {
+      const res = await axios.get( `${API_URL}api/dashboard`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setStats(res.data)
