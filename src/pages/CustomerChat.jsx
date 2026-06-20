@@ -47,7 +47,7 @@ function CustomerChat() {
         try {
 
             const response = await axios.get(
-                `${API_URL}/api/chatbots/${botId}`
+                `${API_URL}api/chatbots/${botId}`
             )
 
             setBot(response.data)
@@ -92,7 +92,7 @@ function CustomerChat() {
         try {
 
             const response = await axios.post(
-                 `${API_URL}/api/chat`,
+                 `${API_URL}api/chat`,
                 {
                     message: userText,
                     botId

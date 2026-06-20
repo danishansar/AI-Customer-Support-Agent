@@ -36,7 +36,7 @@ function Analytics() {
             const token = localStorage.getItem('token')
 
             const response = await axios.get(
-                 `${API_URL}/api/dashboard`,
+                 `${API_URL}api/dashboard`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

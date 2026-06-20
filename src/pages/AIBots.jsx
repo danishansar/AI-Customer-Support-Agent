@@ -33,7 +33,7 @@ function AIBots() {
             const token = localStorage.getItem('token')
 
             await axios.post(
-                 `${API_URL}/api/chatbots`,
+                 `${API_URL}api/chatbots`,
                 formData,
                 {
                     headers: {
@@ -70,7 +70,7 @@ function AIBots() {
             const token = localStorage.getItem('token')
 
             const response = await axios.get(
-                 `${API_URL}/api/chatbots`,
+                 `${API_URL}api/chatbots`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -96,7 +96,7 @@ function AIBots() {
             const token = localStorage.getItem('token')
 
             await axios.delete(
-                `${API_URL}/api/chatbots/${id}`,
+                `${API_URL}api/chatbots/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -262,7 +262,7 @@ function AIBots() {
 
                                 {/* OPEN CHAT */}
                                 <a
-                                    href={`http://localhost:5173/chat/${bot._id}`}
+                                    href={`https://danishansaree.co.in/chat/${bot._id}`}
                                     target="_blank"
                                     className="bg-blue-600 hover:bg-blue-700 px-4 py-3 rounded-xl font-semibold transition-all"
                                 >
@@ -275,7 +275,7 @@ function AIBots() {
                                     onClick={() => {
 
                                         navigator.clipboard.writeText(
-                                            `http://localhost:5173/chat/${bot._id}`
+                                            `https://danishansaree.co.in/chat/${bot._id}`
                                         )
 
                                         alert('Chat Link Copied 🚀')
